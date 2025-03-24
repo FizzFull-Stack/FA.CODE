@@ -10,6 +10,10 @@
       body {
         font-family: "Poppins", sans-serif;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
       /* Animasi untuk mobile menu */
       .mobile-menu {
         max-height: 0;
@@ -42,11 +46,15 @@
 
         <!-- Desktop nav -->
         <nav class="hidden md:flex space-x-6 text-gray-600 items-center">
-          <a href="#" class="hover:text-cyan-600 transition-colors">Home</a>
-          <a href="#" class="hover:text-cyan-600 transition-colors">Service</a>
-          <a href="#" class="hover:text-cyan-600 transition-colors">Contact</a>
+          <a href="#home" class="hover:text-cyan-600 transition-colors">Home</a>
+          <a href="#service" class="hover:text-cyan-600 transition-colors"
+            >Service</a
+          >
+          <a href="#contact" class="hover:text-cyan-600 transition-colors"
+            >Contact</a
+          >
           <a
-            href="#"
+            href="/project.html"
             class="bg-cyan-600 text-white py-2 px-5 rounded-md hover:bg-cyan-700 transition-colors shadow-md"
             >See All Projects</a
           >
@@ -80,17 +88,17 @@
         class="mobile-menu md:hidden absolute left-0 right-0 bg-white shadow-lg mt-2 px-6 py-3 z-10 rounded-b-lg"
       >
         <div class="flex flex-col space-y-4 py-2">
-          <a href="#" class="hover:text-cyan-600 transition-colors py-1"
+          <a href="#home" class="hover:text-cyan-600 transition-colors py-1"
             >Home</a
           >
-          <a href="#" class="hover:text-cyan-600 transition-colors py-1"
+          <a href="#service" class="hover:text-cyan-600 transition-colors py-1"
             >Service</a
           >
-          <a href="#" class="hover:text-cyan-600 transition-colors py-1"
+          <a href="#contact" class="hover:text-cyan-600 transition-colors py-1"
             >Contact</a
           >
           <a
-            href="#"
+            href="/project.html"
             class="bg-cyan-600 text-white py-2 px-4 rounded-md hover:bg-cyan-700 transition-colors text-center mt-2 shadow-md"
             >See All Projects</a
           >
@@ -100,6 +108,7 @@
 
     <!-- Hero Section -->
     <section
+      id="home"
       class="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 px-6"
     >
       <div class="max-w-lg">
@@ -122,7 +131,7 @@
     </section>
 
     <!-- Services Section -->
-    <div class="container mx-auto px-6">
+    <div id="service" class="container mx-auto px-6">
       <section class="py-16">
         <h1 class="text-3xl font-bold mb-12 text-center text-gray-800">
           Layanan Kami
@@ -130,6 +139,7 @@
         <div class="grid gap-8 md:grid-cols-3">
           <!-- Basic Project Card -->
           <div
+            id="basic"
             class="service-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg"
           >
             <div class="p-7">
@@ -214,6 +224,7 @@
 
           <!-- Intermediate Project Card -->
           <div
+            id="intermediate"
             class="service-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg"
           >
             <div class="p-7">
@@ -309,6 +320,7 @@
 
           <!-- Advanced Project Card -->
           <div
+            id="advanced"
             class="service-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg"
           >
             <div class="p-7">
@@ -441,21 +453,21 @@
               <ul class="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="#home"
                     class="text-gray-400 hover:text-white transition-colors"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#service"
                     class="text-gray-400 hover:text-white transition-colors"
                     >Services</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#contact"
                     class="text-gray-400 hover:text-white transition-colors"
                     >Contact</a
                   >
@@ -467,21 +479,21 @@
               <ul class="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="#basic"
                     class="text-gray-400 hover:text-white transition-colors"
                     >Basic Project</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#intermediate"
                     class="text-gray-400 hover:text-white transition-colors"
                     >Intermediate</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#advance"
                     class="text-gray-400 hover:text-white transition-colors"
                     >Advanced</a
                   >
