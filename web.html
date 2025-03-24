@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JokiCoding - Fa.Code</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      /* Animasi untuk mobile menu */
+      .mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .mobile-menu.open {
+        max-height: 500px;
+        transition: max-height 0.5s ease-in;
+      }
+      /* Animasi card hover */
+      .service-card {
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="container mx-auto py-4 px-6 bg-white mt-4 relative shadow-sm"
+    >
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-2xl font-bold text-gray-800">FA.CODE</a>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex space-x-6 text-gray-600 items-center">
+          <a href="#" class="hover:text-cyan-600 transition-colors">Home</a>
+          <a href="#" class="hover:text-cyan-600 transition-colors">Service</a>
+          <a href="#" class="hover:text-cyan-600 transition-colors">Contact</a>
+          <a
+            href="#"
+            class="bg-cyan-600 text-white py-2 px-5 rounded-md hover:bg-cyan-700 transition-colors shadow-md"
+            >See All Projects</a
+          >
+        </nav>
+
+        <!-- Hamburger button (mobile) -->
+        <button
+          id="hamburgerButton"
+          class="md:hidden focus:outline-none text-gray-600 hover:text-gray-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav -->
+      <div
+        id="mobileMenu"
+        class="mobile-menu md:hidden absolute left-0 right-0 bg-white shadow-lg mt-2 px-6 py-3 z-10 rounded-b-lg"
+      >
+        <div class="flex flex-col space-y-4 py-2">
+          <a href="#" class="hover:text-cyan-600 transition-colors py-1"
+            >Home</a
+          >
+          <a href="#" class="hover:text-cyan-600 transition-colors py-1"
+            >Service</a
+          >
+          <a href="#" class="hover:text-cyan-600 transition-colors py-1"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="bg-cyan-600 text-white py-2 px-4 rounded-md hover:bg-cyan-700 transition-colors text-center mt-2 shadow-md"
+            >See All Projects</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 px-6"
+    >
+      <div class="max-w-lg">
+        <h1 class="text-4xl font-bold leading-tight text-gray-800">
+          Kami adalah penyedia layanan
+          <span class="text-cyan-600">Joki Coding</span> terpercaya
+        </h1>
+        <p class="text-gray-600 mt-4 text-lg">
+          Solusi cepat untuk kebutuhan coding Anda
+        </p>
+        <a
+          href="#"
+          class="mt-6 inline-block bg-cyan-600 text-white py-3 px-8 rounded-md hover:bg-cyan-700 transition-colors shadow-md"
+          >Pesan Sekarang</a
+        >
+      </div>
+      <div class="mt-10 md:mt-0">
+        <img src="hero.svg" alt="Hero Image" class="w-full max-w-md" />
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <div class="container mx-auto px-6">
+      <section class="py-16">
+        <h1 class="text-3xl font-bold mb-12 text-center text-gray-800">
+          Layanan Kami
+        </h1>
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Basic Project Card -->
+          <div
+            class="service-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg"
+          >
+            <div class="p-7">
+              <div class="flex justify-between items-start mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Basic Project
+                </h2>
+                <span
+                  class="bg-cyan-100 text-cyan-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                  >Populer</span
+                >
+              </div>
+
+              <p class="text-gray-600 mb-5 text-sm">
+                1 jam - 1 hari pengerjaan dengan HTML, TailwindCSS & JavaScript
+              </p>
+
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">1 Halaman</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Desain Responsive</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Source Code</span>
+                </li>
+              </ul>
+
+              <div class="border-t border-gray-100 pt-5">
+                <span class="text-2xl font-bold text-gray-800">Rp200.000</span>
+                <button
+                  class="mt-3 w-full bg-cyan-600 text-white py-2.5 px-4 rounded-md hover:bg-cyan-700 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+                >
+                  Pilih Layanan
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intermediate Project Card -->
+          <div
+            class="service-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg"
+          >
+            <div class="p-7">
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                Intermediate Project
+              </h2>
+
+              <p class="text-gray-600 mb-5 text-sm">
+                1 hari - 3 hari pengerjaan dengan HTML, TailwindCSS & JavaScript
+              </p>
+
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">3-5 Halaman</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Desain Responsive</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Source Code</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Revisi 2x</span>
+                </li>
+              </ul>
+
+              <div class="border-t border-gray-100 pt-5">
+                <span class="text-2xl font-bold text-gray-800">Rp800.000</span>
+                <button
+                  class="mt-3 w-full bg-cyan-600 text-white py-2.5 px-4 rounded-md hover:bg-cyan-700 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+                >
+                  Pilih Layanan
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Project Card -->
+          <div
+            class="service-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg"
+          >
+            <div class="p-7">
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                Advanced Project
+              </h2>
+
+              <p class="text-gray-600 mb-5 text-sm">
+                2 hari - 1 minggu pengerjaan dengan Laravel, TailwindCSS,
+                TypeScript, React
+              </p>
+
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Full Website</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Desain Responsive</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Source Code</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Revisi 5x</span>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-2 text-cyan-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-700">Support 1 Bulan</span>
+                </li>
+              </ul>
+
+              <div class="border-t border-gray-100 pt-5">
+                <span class="text-2xl font-bold text-gray-800"
+                  >Rp1.500.000</span
+                >
+                <button
+                  class="mt-3 w-full bg-cyan-600 text-white py-2.5 px-4 rounded-md hover:bg-cyan-700 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+                >
+                  Pilih Layanan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">FA.CODE</h3>
+            <p class="text-gray-400 max-w-md">
+              Layanan joki coding terpercaya dengan kualitas terbaik dan harga
+              terjangkau.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-semibold mb-4">Menu</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Layanan</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Basic Project</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Intermediate</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Advanced</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Kontak</h4>
+              <ul class="space-y-2">
+                <li class="text-gray-400">Email: contact@facode.com</li>
+                <li class="text-gray-400">WhatsApp: +62 881 0122 48162</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400"
+        >
+          <p>© 2023 FA.CODE. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerButton = document.getElementById("hamburgerButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        hamburgerButton.addEventListener("click", function () {
+          // Toggle menu visibility
+          mobileMenu.classList.toggle("open");
+          // Toggle hamburger animation
+          hamburgerButton.classList.toggle("active");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !mobileMenu.contains(event.target) &&
+            !hamburgerButton.contains(event.target)
+          ) {
+            mobileMenu.classList.remove("open");
+            hamburgerButton.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
